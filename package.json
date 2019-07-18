@@ -1,0 +1,24 @@
+{
+  "name": "wth-cli",
+  "version": "1.0.0",
+  "description": "Look up abbreviation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haixiang6123/wth-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haixiang6123/wth-cli/issues"
+  },
+  "homepage": "https://github.com/Haixiang6123/wth-cli#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3"
+  }
+}
