@@ -4,12 +4,13 @@ const cheerio = require('cheerio')
 
 const baseURL = 'https://www.abbreviations.com'
 
-// Get input
+// Validate keyword
 if (process.argv.length !== 3) {
     console.log('Example: wth lol')
     return
 }
 
+// Get keyword
 const term = process.argv[2]
 console.log('Looking for ' + term)
 
