@@ -5,7 +5,12 @@ const cheerio = require('cheerio')
 const baseURL = 'https://www.abbreviations.com'
 
 // Get input
-const term = process.argv[2]
+if (process.argv.length != 2) {
+    console.log('Example: wth lol')
+    return
+}
+
+const term = process.argv[1]
 console.log('Looking for ' + term)
 
 // Send request
