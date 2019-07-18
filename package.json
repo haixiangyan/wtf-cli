@@ -1,8 +1,8 @@
 {
-  "name": "wth-cli",
+  "name": "wtf-cli",
   "version": "1.0.0",
   "bin": {
-    "wth": "index.js"
+    "wtf-cli": "index.js"
   },
   "description": "Look up abbreviation",
   "main": "index.js",
