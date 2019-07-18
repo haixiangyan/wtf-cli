@@ -5,18 +5,16 @@ const cheerio = require('cheerio')
 const baseURL = 'https://www.abbreviations.com'
 
 // Get input
-if (process.argv.length != 2) {
+if (process.argv.length !== 3) {
     console.log('Example: wth lol')
     return
 }
 
-const term = process.argv[1]
+const term = process.argv[2]
 console.log('Looking for ' + term)
 
 // Send request
-axios.get({
-    url: `${baseURL}/${term}`,
-})
+axios.get(`${baseURL}/${term}`)
     .then(response => {
         // Get raw html
         const html = response.data
