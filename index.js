@@ -29,7 +29,7 @@ axios.get(`${baseURL}/${term}`)
             if (index === 0) {
               return
             }
-            console.log($(element).text())
+            console.log(chalk.yellow((index + 1)) + '. ' + $(element).text())
         })
         console.log(chalk.red('##############################'))
     })
