@@ -23,6 +23,10 @@ axios.get(`${baseURL}/${term}`)
         const $ = cheerio.load(html)
         // Get all description on first page
         $('p.desc').each((index, element) => {
+            // Skip the first one
+            if (index === 0) {
+              return
+            }
             console.log($(element).text())
         })
     })
