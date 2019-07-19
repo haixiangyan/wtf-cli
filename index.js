@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const axios = require('axios')
 const cheerio = require('cheerio')
+const chalk = require('chalk')
 
 const baseURL = 'https://www.abbreviations.com'
 
@@ -12,7 +13,8 @@ if (process.argv.length !== 3) {
 
 // Get keyword
 const term = process.argv[2]
-console.log('Looking for ' + term)
+console.log(chalk.red('##############################'))
+console.log(chalk.blue('Looking for ' + term + '...'))
 
 // Send request
 axios.get(`${baseURL}/${term}`)
@@ -29,6 +31,7 @@ axios.get(`${baseURL}/${term}`)
             }
             console.log($(element).text())
         })
+        console.log(chalk.red('##############################'))
     })
     .catch(error => {
         console.log(error)
