@@ -1,4 +1,4 @@
-# wth-cli
+# wtf-cli
 Look up abbreviation
 
 ## Install
