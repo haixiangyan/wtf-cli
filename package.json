@@ -1,6 +1,6 @@
 {
   "name": "wtf-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "bin": {
     "wtf": "index.js"
   },
