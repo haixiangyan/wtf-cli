@@ -1,5 +1,7 @@
 # wtf-cli
-Look up abbreviation
+A command tool for looking up abbreviation.
+
+[![asciicast](https://asciinema.org/a/FglHqKpGOyQOgt448vRQOR07O.svg)](https://asciinema.org/a/FglHqKpGOyQOgt448vRQOR07O)
 
 ## Install
 
@@ -14,7 +16,7 @@ $ npm i -g wtf-cli
 Example: Look up the meaning of `wtf`.
 
 ```
-$ wtf-cli wtf
+$ wtf wtf
 ```
 
 ## LICENSE
