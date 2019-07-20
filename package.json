@@ -1,25 +1,25 @@
 {
   "name": "wtf-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "wtf-cli": "index.js"
   },
-  "description": "Look up abbreviation",
+  "description": "Command tool to look up abbreviation",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Haixiang6123/wth-cli.git"
+    "url": "git+https://github.com/Haixiang6123/wtf-cli.git"
   },
-  "keywords": [],
+  "keywords": ["abbreviations", "utils", "tools", "helper", "command line"],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Haixiang6123/wth-cli/issues"
+    "url": "https://github.com/Haixiang6123/wtf-cli/issues"
   },
-  "homepage": "https://github.com/Haixiang6123/wth-cli#readme",
+  "homepage": "https://github.com/Haixiang6123/wtf-cli#readme",
   "dependencies": {
     "axios": "^0.19.0",
     "chalk": "^2.4.2",
