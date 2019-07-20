@@ -8,7 +8,7 @@ const baseURL = 'https://www.abbreviations.com'
 
 // Validate keyword
 if (process.argv.length !== 3) {
-    console.log('Example: wtf-cli wtf')
+    console.log('Usage: wtf-cli wtf')
     return
 }
 
