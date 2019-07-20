@@ -2,7 +2,7 @@
   "name": "wtf-cli",
   "version": "1.0.2",
   "bin": {
-    "wtf-cli": "index.js"
+    "wtf": "index.js"
   },
   "description": "Command tool to look up abbreviation",
   "main": "index.js",
