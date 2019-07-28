@@ -1,7 +1,7 @@
 # wtf-cli
 A command tool for looking up abbreviation.
 
-[![asciicast](https://asciinema.org/a/FglHqKpGOyQOgt448vRQOR07O.svg)](https://asciinema.org/a/FglHqKpGOyQOgt448vRQOR07O)
+[![asciicast](https://asciinema.org/a/259570.svg)](https://asciinema.org/a/259570)
 
 ## Install
 
