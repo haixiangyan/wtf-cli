@@ -44,7 +44,7 @@ axios.get(`${baseURL}/${term}`)
         // Transfer to DOM
         const $ = cheerio.load(html)
 
-        let results = []
+        let results = [['No.', 'Description', 'Rating']]
         // Get all description on first page
         $('tbody p.desc').each((index, element) => {
             // Skip header
@@ -61,7 +61,7 @@ axios.get(`${baseURL}/${term}`)
         // Get all ratings
         $('tbody span.sc').each((index, element) => {
             // Update ratings
-            results[index][2] = rate(5, cheerio(element).find('span.sf').length)
+            results[index + 1][2] = rate(5, cheerio(element).find('span.sf').length)
         })
 
         // Print results
