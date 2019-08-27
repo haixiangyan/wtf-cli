@@ -3,7 +3,7 @@ const axios = require('axios')
 const chalk = require('chalk')
 const ora = require('ora')
 const table = require('table').table
-const secret = require('./secret')
+const keys = require('./keys')
 
 // Validate keyword
 if (process.argv.length !== 3) {
@@ -69,5 +69,5 @@ function rate(total, likes) {
 
 // Make request url
 function makeRequestUrl(term) {
-    return `https://www.abbreviations.com/services/v2/abbr.php?uid=${secret.userId}&tokenid=${secret.token}&term=${term}&format=json`
+    return `https://www.abbreviations.com/services/v2/abbr.php?uid=${keys.userId}&tokenid=${keys.token}&term=${term}&format=json`
 }
