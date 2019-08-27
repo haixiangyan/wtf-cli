@@ -48,7 +48,7 @@ function printResults(results) {
 
     console.log(table(results))
 
-    console.log(chalk.bgRed('Results provided courtesy of Abbreviations.com (https://www.abbreviations.com/)'))
+    console.log(chalk.magenta('Results provided courtesy of Abbreviations.com (https://www.abbreviations.com/)'))
 
     console.log(chalk.red('##############################'))
 }
