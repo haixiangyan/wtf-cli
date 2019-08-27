@@ -4,7 +4,7 @@
   "bin": {
     "wtf": "index.js"
   },
-  "description": "Command tool to look up abbreviation",
+  "description": "Command tool to look up abbreviation. A command tool for looking up abbreviation Results provided courtesy of Abbreviations.com.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

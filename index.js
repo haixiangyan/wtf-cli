@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 const axios = require('axios')
-const cheerio = require('cheerio')
 const chalk = require('chalk')
 const ora = require('ora')
 const table = require('table').table
-
-const baseURL = 'https://www.abbreviations.com'
+const secret = require('./secret')
 
 const config = {
     columns: {
@@ -35,33 +33,23 @@ const term = process.argv[2]
 const spinner = ora(chalk.blue('Looking for ' + term + '...')).start();
 
 // Send request
-axios.get(`${baseURL}/${term}`)
+axios.get(makeRequestUrl(term))
     .then(response => {
         // Stop loading
         spinner.stop()
-        // Get raw html
-        const html = response.data
-        // Transfer to DOM
-        const $ = cheerio.load(html)
 
         let results = [['No.', 'Description', 'Rating']]
-        // Get all description on first page
-        $('tbody p.desc').each((index, element) => {
-            // Skip header
-            if (index === 0) {
-                return
-            }
+
+        // Get top 10
+        const top10 = response.data.result.slice(0, 10)
+
+        top10.forEach((meaning, index) => {
             // Add description
             results.push([
                 chalk.yellow(index),
-                $(element).text(),
-                ''
+                meaning.definition,
+                rate(5, meaning.score)
             ])
-        })
-        // Get all ratings
-        $('tbody span.sc').each((index, element) => {
-            // Update ratings
-            results[index + 1][2] = rate(5, cheerio(element).find('span.sf').length)
         })
 
         // Print results
@@ -92,4 +80,9 @@ function rate(total, likes) {
         }
     }
     return ratings
+}
+
+// Make request url
+function makeRequestUrl(term) {
+    return `https://www.abbreviations.com/services/v2/abbr.php?uid=${secret.userId}&tokenid=${secret.token}&term=${term}&format=json`
 }
