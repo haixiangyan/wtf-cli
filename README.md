@@ -1,5 +1,5 @@
 # wtf-cli
-A command tool for looking up abbreviation.
+A command tool for looking up abbreviation (Results provided by [https://www.abbreviations.com/](https://www.abbreviations.com/)).
 
 [![asciicast](https://asciinema.org/a/amfz0RX1BXlJdEqGtdRzmj8Rm.svg)](https://asciinema.org/a/amfz0RX1BXlJdEqGtdRzmj8Rm)
 
@@ -21,4 +21,4 @@ $ wtf wtf
 
 ## LICENSE
 
-Apache
+Apache 2.0
