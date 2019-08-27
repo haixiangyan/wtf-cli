@@ -5,23 +5,6 @@ const ora = require('ora')
 const table = require('table').table
 const secret = require('./secret')
 
-const config = {
-    columns: {
-        0: {
-            alignment: 'left',
-            width: 10
-        },
-        1: {
-            alignment: 'center',
-            width: 10
-        },
-        2: {
-            alignment: 'right',
-            width: 10
-        }
-    }
-};
-
 // Validate keyword
 if (process.argv.length !== 3) {
     console.log('Usage: wtf wtf')
